@@ -7,66 +7,68 @@
     <title>{% block title %}Hubert Furmański - Programowanie w Internecie{% endblock %}</title>
 </head>
 <body>
-<div class="main">
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <a class="navbar-brand" href="{{ path('main') }}">Strona główna</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
-                    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<div class="container-md">
+    <div class="main">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="{{ path('main') }}">Strona główna</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                        aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navbarColor01">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ path('projekt') }}">Projekt <span
-                                    class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ path('o_mnie') }}">O mnie</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ path('kontakt') }}">Kontakt</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/Furm4n/PWI-Projekt-1">Repozytorium</a>
-                    </li>
-                    {% if app.user %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ path('app_logout') }}">Wyloguj się</a>
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ path('projekt') }}">Projekt <span
+                                        class="sr-only">(current)</span></a>
                         </li>
-                        </a>
-                    {% else %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ path('app_login') }}">Zaloguj się</a>
+                            <a class="nav-link" href="{{ path('o_mnie') }}">O mnie</a>
                         </li>
-                    {% endif %}
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <div class="jumbotron">
-        <h2>Witaj na mojej stronie!</h2>
-        <p>Projekt został przygotowany w ramach przedmiotu Programowanie w Internecie w oparciu o framework Symfony
-            PHP</p>
-        <hr class="my-4">
-        <h2>Opis projektu:</h2>
-        <p>Po zalogowaniu użytkownik otrzyma dostęp do treści dostępnych tylko dla zalogowanych</p>
-        <hr class="my-4">
-        <h2>Istniejące konta:</h2>
-        <p><strong>Login: </strong>admin <br>
-            <strong>Hasło: </strong>admin</p>
-        <p><strong>Login: </strong>user<br>
-            <strong>Hasło: </strong>12345</p>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('kontakt') }}">Kontakt</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/Furm4n/PWI-Projekt-1">Repozytorium</a>
+                        </li>
+                        {% if app.user %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('app_logout') }}">Wyloguj się</a>
+                            </li>
+                            </a>
+                        {% else %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('app_login') }}">Zaloguj się</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="jumbotron">
+            <h2>Witaj na mojej stronie!</h2>
+            <p>Projekt został przygotowany w ramach przedmiotu Programowanie w Internecie w oparciu o framework Symfony
+                PHP</p>
+            <hr class="my-4">
+            <h2>Opis projektu:</h2>
+            <p>Po zalogowaniu użytkownik otrzyma dostęp do treści dostępnych tylko dla zalogowanych</p>
+            <hr class="my-4">
+            <h2>Istniejące konta:</h2>
+            <p><strong>Login: </strong>admin <br>
+                <strong>Hasło: </strong>admin</p>
+            <p><strong>Login: </strong>user<br>
+                <strong>Hasło: </strong>12345</p>
+        </div>
+        {% block body %}{% endblock %}
+        <table class="table table-hover">
+            <thead>
+            <tr class="default">
+                <td>Hubert Furmański © 2020</td>
+            </tr>
+            </thead>
+        </table>
     </div>
-    {% block body %}{% endblock %}
-    <table class="table table-hover">
-        <thead>
-        <tr class="default">
-            <td>Hubert Furmański © 2020</td>
-        </tr>
-        </thead>
-    </table>
 </div>
 </body>
 </html>
