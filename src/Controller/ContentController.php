@@ -8,14 +8,6 @@ use Symfony\Component\Routing\Annotation\Route;
 class ContentController extends AbstractController
 {
     /**
-     * @Route("/", name="main")
-     */
-    public function index()
-    {
-        return $this->render('base.html.twig');
-    }
-
-    /**
      * @Route("/projekt", name="projekt")
      */
     public function projekt()
