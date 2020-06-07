@@ -2,7 +2,8 @@
 <html lang="pl">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="shortcut icon" type="image/x-icon" href="../images/logo.png" />
+        <title>{% block title %}Hubert Furmański - Programowanie w Internecie{% endblock %}</title>
         {% block stylesheets %}<style>/* line 1, ../sass/main.sass */
             .main {
                 min-height: 100vh;
@@ -109,73 +110,6 @@
                 text-align: center;
             }
 
-            /* line 1, ../sass/tabela.sass */
-            .divTabela {
-                width: 30vw;
-                height: 50vh;
-                display: table;
-                margin: 0 auto;
-            }
-
-            /* line 8, ../sass/tabela.sass */
-            .divTabelaRow {
-                display: table-row;
-                width: 100%;
-                margin: auto;
-            }
-
-            /* line 13, ../sass/tabela.sass */
-            .divTabelaCell {
-                display: table-cell;
-                border-style: solid;
-                border-width: 1px;
-                width: 99px;
-                height: 99px;
-                font-size: 75px;
-                border-color: black;
-                color: red;
-                text-align: center;
-            }
-
-            /* line 24, ../sass/tabela.sass */
-            .przyciskContainer {
-                text-align: center;
-            }
-
-            #zadanieContent{
-                height: 80vh;
-            }
-
-            /* line 27, ../sass/tabela.sass */
-            .przycisk {
-                color: #ffffff ;
-                text-decoration: none;
-                text-align: center;
-                font-size: 20px !important;
-                margin: 5px;
-                cursor: pointer;
-                flex-grow: 1;
-                background: linear-gradient(rgba(33, 48, 88, 0.4), rgba(33, 48, 88, 0.4));
-                padding-top: 20px;
-                padding-bottom: 20px;
-                padding-left: 30px;
-                padding-right: 30px;
-                border: 2px solid #5B5056 !important;
-                border-radius: 6px;
-                display: inline-block;
-                margin-left: 10px;
-                margin-top: 5vh;
-            }
-            /* line 43, ../sass/tabela.sass */
-            .przycisk:hover {
-                border-color: #ffffff !important;
-            }
-            /* line 46, ../sass/tabela.sass */
-            .przycisk:active {
-                position: relative;
-                top: 1px;
-            }
-
             p{
                 margin: 10px;
             }
@@ -213,20 +147,9 @@
                     margin-right: 10vw;
                     margin-left: 10vw;
                 }
-
-                .divTabela {
-                    width: 300px;
-                    height: 300px;
-                }
-
-                #zadanieContent{
-                    height: 600px;
-                }
-
             }</style>{% endblock %}
     </head>
     <body>
-        {% block body %}
             <div class="main">
             <header>
                 <div id="logo">
@@ -238,26 +161,17 @@
             <div class="mainContent">
                 <div id="ph1"></div>
                 <div id="buttonContainer">
-                    <a href="#content">
-                        <div class="przycisk_menu" onclick="wyswietlPD()">Prace domowe</div>
-                    </a>
-                    <a href="#content">
-                        <div class="przycisk_menu" onclick="wyswietlKontakt()">Kontakt</div>
-                    </a>
-                    <a href="#">
-                        <div class="przycisk_menu" onclick="wyswietlMain()">O mnie</div>
-                    </a>
-                    <a href="#">
-                        <div class="przycisk_menu" onclick="wyswietlMain()">Moje projekty</div>
-                    </a>
+                    <div class="przycisk_menu" onclick="wyswietlPD()">Prace domowe</div>
+                    <div class="przycisk_menu" onclick="wyswietlKontakt()">Kontakt</div>
+                    <div class="przycisk_menu" onclick="wyswietlMain()">O mnie</div>
+                    <div class="przycisk_menu" onclick="wyswietlMain()">Moje projekty</div>
                 </div>
             </div>
+                {% block body %}{% endblock %}
             <footer>
                 <p>Hubert Furmański</p>
                 <p>Copyright © 2020</p>
             </footer>
         </div>
-        {% endblock %}
-        {% block javascripts %}{% endblock %}
     </body>
 </html>
