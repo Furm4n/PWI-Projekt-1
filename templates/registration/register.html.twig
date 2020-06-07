@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {% if app.flashes('verify_email_error') %}
-        <div class="alert alert-danger" role="alert">Wprowadzono niepoprawne dane.</div>
-    {% endif %}
+    {% for flashError in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">{{flashError}}</div>
+    {% endfor %}
     <form>
         {{ form_start(registrationForm) }}
         <fieldset>
