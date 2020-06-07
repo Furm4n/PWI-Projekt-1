@@ -20,7 +20,7 @@ class ContentController extends AbstractController
      */
     public function projekt()
     {
-        return $this->render('main/index.html.twig');
+        return $this->render('main/projekt.html.twig');
     }
 
     /**
@@ -28,7 +28,7 @@ class ContentController extends AbstractController
      */
     public function kontakt()
     {
-        return $this->render('main/index.html.twig');
+        return $this->render('main/kontakt.html.twig');
     }
 
     /**
@@ -36,7 +36,7 @@ class ContentController extends AbstractController
      */
     public function oMnie()
     {
-        return $this->render('main/index.html.twig');
+        return $this->render('main/omnie.html.twig');
     }
 
 
