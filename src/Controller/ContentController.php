@@ -22,4 +22,23 @@ class ContentController extends AbstractController
     {
         return $this->render('main/index.html.twig');
     }
+
+    /**
+     * @Route("/kontakt", name="kontakt")
+     */
+    public function kontakt()
+    {
+        return $this->render('main/index.html.twig');
+    }
+
+    /**
+     * @Route("/o_mnie", name="o_mnie")
+     */
+    public function oMnie()
+    {
+        return $this->render('main/index.html.twig');
+    }
+
+
+
 }
