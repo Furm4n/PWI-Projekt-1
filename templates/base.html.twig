@@ -2,7 +2,7 @@
 <html lang="pl">
     <head>
         <meta charset="UTF-8">
-        <link rel="shortcut icon" type="image/x-icon" href="../templates/images/logo.png" />
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo.png') }}" />
         <title>{% block title %}Hubert Furmański - Programowanie w Internecie{% endblock %}</title>
         {% block stylesheets %}<style>/* line 1, ../sass/main.sass */
             .main {
@@ -95,7 +95,7 @@
             }
 
             .mainContent{
-                background-image: url(../templates/images/ipad.jpg) !important;
+                background-image: url({{ asset('images/ipad.png') }}) !important;
                 background-repeat: no-repeat, repeat;
                 background-position: center;
                 background-size: cover;
@@ -154,7 +154,7 @@
             <header>
                 <div id="logo">
                     <a href="#">
-                        <img src="../templates/images/logo.png" style="height: 14vh;" alt="Logo">
+                        <img src="{{ asset('images/logo.png') }}" style="height: 14vh;" alt="Logo">
                     </a>
                 </div>
             </header>
