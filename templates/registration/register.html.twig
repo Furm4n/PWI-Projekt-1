@@ -1,24 +1,31 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {% for flashError in app.flashes('verify_email_error') %}
-        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
-    {% endfor %}
+    {% if flashError in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">Wprowadzono niepoprawne dane.</div>
+    {% endif %}
     <form>
         {{ form_start(registrationForm) }}
         <fieldset>
             <legend>Zarejestruj się</legend>
             <div class="form-group">
                 <label for="exampleInputEmail1">Nazwa użytkownika</label>
-                {{ form_row(registrationForm.username) }}
+                {{ form_row(registrationForm.username, {
+                    label: ''
+                }) }}
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Hasło</label>
                 {{ form_row(registrationForm.plainPassword, {
-                    label: 'Hasło'
+                    label: ''
                 }) }}
             </div>
-            {{ form_row(registrationForm.agreeTerms) }}
+            <div class="form-group">
+                <label for="exampleInputPassword1">Zaakceptuj regulamin</label>
+                {{ form_row(registrationForm.agreeTerms, {
+                    label: ''
+                }) }}
+            </div>
         </fieldset>
         <button type="submit" class="btn">Zarejestruj się</button>
         {{ form_end(registrationForm) }}
