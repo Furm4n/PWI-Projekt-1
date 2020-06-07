@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('../images/logo.png') }}"/>
     <title>{% block title %}Hubert Furmański - Programowanie w Internecie{% endblock %}</title>
-    {% block stylesheets %}
         <style>/* line 1, ../sass/main.sass */
         .main {
             min-height: 100vh;
@@ -155,7 +154,8 @@
             .przycisk {
                 float: right;
             }
-        }</style>{% endblock %}
+        {% block stylesheets %}{% endblock %}
+        }</style>
 </head>
 <body>
 <div class="main">
