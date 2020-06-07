@@ -3,192 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('../images/logo.png') }}"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <title>{% block title %}Hubert Furmański - Programowanie w Internecie{% endblock %}</title>
-        <style>/* line 1, ../sass/main.sass */
-        .main {
-            min-height: 100vh;
-            overflow: hidden;
-            display: block;
-            position: relative;
-            padding-bottom: 10vh;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* line 8, ../sass/main.sass */
-        body {
-            height: 100%;
-            margin: 0;
-            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-            background: radial-gradient(circle, #e5e5e5 0%, #5B5056 100%);
-            position: relative;
-        }
-
-        /* line 15, ../sass/main.sass */
-        header {
-            height: 17vh;
-            background: radial-gradient(circle, #e5e5e5 0%, #5B5056 100%);
-            padding: 5px;
-            overflow: hidden;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            border-bottom: 3px solid black;
-        }
-
-        h1 {
-            margin-left: 40px;
-            margin-right: 40px;
-            padding: 10px;
-        }
-
-        /* line 33, ../sass/main.sass */
-        footer {
-            clear: both;
-            text-align: center;
-            padding: 5px;
-            width: 100%;
-            position: absolute;
-            bottom: 0;
-        }
-
-        /* line 41, ../sass/main.sass */
-        a {
-            text-decoration: none;
-            color: #ffffff;
-        }
-
-        /* line 45, ../sass/main.sass */
-        .przycisk_menu {
-            color: #ffffff;
-            text-decoration: none;
-            text-align: center;
-            font-size: 40px !important;
-            margin: 5px;
-            cursor: pointer;
-            flex-grow: 1;
-            background: linear-gradient(rgba(33, 48, 88, 0.4), rgba(33, 48, 88, 0.4));
-            padding-top: 6vh;
-            padding-bottom: 6vh;
-            padding-left: 4vw;
-            padding-right: 4vw;
-            border: 2px solid #ffffff !important;
-            border-radius: 6px;
-            display: inline-block;
-            margin-left: 4vh;
-            margin-top: 32vh;
-        }
-
-        /* line 61, ../sass/main.sass */
-        .przycisk_menu:hover {
-            border-color: black !important;
-        }
-
-        /* line 64, ../sass/main.sass */
-        .przycisk_menu:active {
-            position: relative;
-            top: 1px;
-        }
-
-        /* line 68, ../sass/main.sass */
-        #logo {
-            float: left;
-        }
-
-        .mainContent {
-            background-image: url({{ asset('images/ipad.jpg') }}) !important;
-            background-repeat: no-repeat, repeat;
-            background-position: center;
-            background-size: cover;
-            color: white;
-            margin-top: 18vh;
-            border-bottom: 3px solid black;
-            height: 80vh;
-            width: 100%;
-        }
-
-        #buttonContainer {
-            text-align: center;
-        }
-
-        p {
-            margin: 10px;
-        }
-
-
-        @media (max-width: 1400px) {
-            #ph1 {
-                height: 10vh;
-                width: 100%;
-            }
-
-            #logo {
-                max-height: 13vh;
-                max-width: 13vw;
-                float: left;
-            }
-
-            header {
-                height: 17vh;
-                background: radial-gradient(circle, #e5e5e5 0%, #5B5056 100%);
-                padding: 5px;
-                overflow: hidden;
-                position: fixed;
-                top: 0;
-                width: 100%;
-                border-bottom: 3px solid black;
-            }
-
-            .przycisk_menu {
-                display: list-item;
-                list-style: none;
-                margin-top: 3vh;
-                font-size: 15px !important;
-                height: 1px;
-                margin-right: 10vw;
-                margin-left: 10vw;
-            }
-
-            #login {
-                float: right;
-            }
-        {% block stylesheets %}{% endblock %}
-        }</style>
 </head>
 <body>
 <div class="main">
     <header>
-        <div id="logo">
-            <a href="{{ path('main') }}">
-                <img src="{{ asset('images/logo.png') }}" style="height: 14vh;" alt="Logo">
-            </a>
-        </div>
-        <div id="login">
-            {% if app.user %}
-                <a href="{{ path('app_logout') }}"><button type="button" class="btn btn-primary">Wyloguj się</button></a>
-            {% else %}
-                <a href="{{ path('app_login') }}"><button type="button" class="btn btn-primary">Zaloguj się</button></a>
-            {% endif %}
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="{{ path('main') }}">Strona główna</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ path('projekt') }}">Projekt <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('o_mnie') }}">O mnie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('kontakt') }}">Kontakt</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/Furm4n/PWI-Projekt-1">Repozytorium</a>
+                    </li>
+                    {% if app.user %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('app_logout') }}">Wyloguj się</a>
+                        </li>
+                        </a>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('app_login') }}">Zaloguj się</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
     </header>
-    <div class="mainContent">
-        <div id="ph1"></div>
-        <div id="buttonContainer">
-            <a href="{{ path('projekt') }}">
-                <div class="przycisk_menu">Projekt</div>
-            </a>
-            <a href="{{ path('kontakt') }}">
-                <div class="przycisk_menu">Kontakt</div>
-            </a>
-            <a href="{{ path('o_mnie') }}">
-                <div class="przycisk_menu">O mnie</div>
-            </a>
-            <a href="https://github.com/Furm4n/PWI-Projekt-1">
-                <div class="przycisk_menu">Repozytorium</div>
-            </a>
-        </div>
+    <div class="jumbotron">
+        <h1 class="display-3">Witaj na mojej stronie!</h1>
+        <p class="lead">Programowanie w internecie - projekt powstał przy użyciu frameworka Symfony PHP</p>
+        <hr class="my-4">
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="https://github.com/Furm4n/PWI-Projekt-1" role="button">Repozytorium
+                GitHub</a>
+        </p>
     </div>
     {% block body %}{% endblock %}
     <footer>
@@ -196,5 +60,14 @@
         <p>Copyright © 2020</p>
     </footer>
 </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
 </body>
 </html>
