@@ -8,23 +8,26 @@
         {{ form_start(registrationForm) }}
         <fieldset>
             <legend>Zarejestruj się</legend>
+            <label for="exampleInputEmail1">Nazwa Użytkownika</label>
             <div class="form-group">
                 {{ form_row(registrationForm.username, {
-                    label: 'Nazwa użytkownika'
+                    label: ' '
                 }) }}
             </div>
+            <label for="exampleInputPassword1">Hasło</label>
             <div class="form-group">
                 {{ form_row(registrationForm.plainPassword, {
-                    label: 'Hasło'
+                    label: ' '
                 }) }}
             </div>
+            <label for="exampleInputPassword1">Zaakceptuj Regulamin</label>
             <div class="form-group">
                 {{ form_row(registrationForm.agreeTerms, {
-                    label: 'Zaakceptuj regulamin'
+                    label: ' '
                 }) }}
             </div>
         </fieldset>
-        <button type="submit" class="btn">Zarejestruj się</button>
+        <button type="submit" class="btn btn-primary">Zarejestruj się</button>
         {{ form_end(registrationForm) }}
     </form>
 {% endblock %}
