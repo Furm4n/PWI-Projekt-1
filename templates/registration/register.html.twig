@@ -9,21 +9,18 @@
         <fieldset>
             <legend>Zarejestruj się</legend>
             <div class="form-group">
-                <label for="exampleInputEmail1">Nazwa użytkownika</label>
                 {{ form_row(registrationForm.username, {
-                    label: ''
+                    label: 'Nazwa użytkownika'
                 }) }}
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Hasło</label>
                 {{ form_row(registrationForm.plainPassword, {
-                    label: ''
+                    label: 'Hasło'
                 }) }}
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Zaakceptuj regulamin</label>
                 {{ form_row(registrationForm.agreeTerms, {
-                    label: ''
+                    label: 'Zaakceptuj regulamin'
                 }) }}
             </div>
         </fieldset>
