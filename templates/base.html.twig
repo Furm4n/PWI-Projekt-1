@@ -166,7 +166,11 @@
             </a>
         </div>
         <div id="login">
-        {% block login %} {% endblock %}
+            {% if app.user %}
+                <a href="{{ path('app_logout') }}"><button type="button" class="btn btn-primary">Wyloguj się</button></a>
+            {% else %}
+                <a href="{{ path('app_login') }}"><button type="button" class="btn btn-primary">Zaloguj się</button></a>
+            {% endif %}
         </div>
     </header>
     <div class="mainContent">
