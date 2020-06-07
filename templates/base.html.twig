@@ -22,29 +22,39 @@
             <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{{ path('projekt') }}">Projekt <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="{{ path('o_mnie') }}">O mnie</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" href="{{ path('kontakt') }}">Kontakt</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="https://github.com/Furm4n/PWI-Projekt-1">Repozytorium</a>
                     </li>
+                    {% if app.user %}
+                        <li class="nav-item">
+                            <a href="{{ path('app_logout') }}">Wyloguj się</a>
+                        </li>
+                    </a>
+                    {% else %}
+                        <li class="nav-item">
+                            <a href="{{ path('app_login') }}">Zaloguj się</a>
+                        </li>
+                        </a>
+                    {% endif %}
                 </ul>
             </div>
         </nav>
     </header>
     <div class="jumbotron">
-        <h1 class="display-3">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-            featured content or information.</p>
+        <h1 class="display-3">Witaj na mojej stronie!</h1>
+        <p class="lead">Programowanie w internecie - projekt powstał przy użyciu frameworka Symfony PHP</p>
         <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p>Hubert Furmański</p>
         <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            <a class="btn btn-primary btn-lg" href="https://github.com/Furm4n/PWI-Projekt-1" role="button">Repozytorium GitHub</a>
         </p>
     </div>
     {% block body %}{% endblock %}
