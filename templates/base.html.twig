@@ -161,10 +161,10 @@
             <div class="mainContent">
                 <div id="ph1"></div>
                 <div id="buttonContainer">
-                    <div class="przycisk_menu" onclick="wyswietlPD()">Prace domowe</div>
-                    <div class="przycisk_menu" onclick="wyswietlKontakt()">Kontakt</div>
-                    <div class="przycisk_menu" onclick="wyswietlMain()">O mnie</div>
-                    <div class="przycisk_menu" onclick="wyswietlMain()">Moje projekty</div>
+                    <a href="{{ path('projekt') }}"><div class="przycisk_menu">Projekt</div></a>
+                    <div class="przycisk_menu">Kontakt</div>
+                    <div class="przycisk_menu">O mnie</div>
+                    <div class="przycisk_menu">Repozytorium</div>
                 </div>
             </div>
                 {% block body %}{% endblock %}
