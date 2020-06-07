@@ -1,32 +1,25 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+<div class="jumbotron">
     {% for flashError in app.flashes('verify_email_error') %}
-        <div class="alert alert-danger" role="alert">{{flashError}}</div>
+        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}
-    <form>
-        {{ form_start(registrationForm) }}
-        <fieldset>
-            <legend>Zarejestruj się</legend>
-            <label for="exampleInputEmail1">Nazwa Użytkownika</label>
-            <div class="form-group">
-                {{ form_row(registrationForm.username, {
-                    label: ' '
-                }) }}
-            </div>
-            <label for="exampleInputPassword1">Hasło</label>
-            <div class="form-group">
-                {{ form_row(registrationForm.plainPassword, {
-                    label: ' '
-                }) }}
-            </div>
-            <div class="form-group">
-                {{ form_row(registrationForm.agreeTerms, {
-                    label: 'Zaakceptuj Regulamin '
-                }) }}
-            </div>
-        </fieldset>
-        <button type="submit" class="btn btn-primary">Zarejestruj się</button>
-        {{ form_end(registrationForm) }}
-    </form>
+
+    <h1>Register</h1>
+
+    {{ form_start(registrationForm) }}
+    {{ form_row(registrationForm.username, {
+        label: 'Nazwa użytkownika'
+    }) }}
+    {{ form_row(registrationForm.plainPassword, {
+        label: 'Hasło'
+    }) }}
+    {{ form_row(registrationForm.agreeTerms, {
+        label: 'Zaakceptuj regulamin'
+    }) }}
+
+    <button type="submit" class="btn btn-primary">Zarejestruj</button>
+    {{ form_end(registrationForm) }}
+</div>
 {% endblock %}
