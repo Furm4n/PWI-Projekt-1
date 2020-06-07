@@ -7,7 +7,7 @@
     <title>{% block title %}Hubert Furmański - Programowanie w Internecie{% endblock %}</title>
 </head>
 <body>
-<div class="main">
+<div class="container">
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <a class="navbar-brand" href="{{ path('main') }}">Strona główna</a>
@@ -54,6 +54,13 @@
         </p>
     </div>
     {% block body %}{% endblock %}
+    <table class="table table-hover">
+        <thead>
+        <tr class="default">
+            <td>Copyright©g5-test.herokuapp.com</td>
+        </tr>
+        </thead>
+    </table>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
