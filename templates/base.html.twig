@@ -1,12 +1,432 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}<style>/* line 1, ../sass/main.sass */
+            .main {
+                min-height: 100vh;
+                overflow: hidden;
+                display: block;
+                position: relative;
+                padding-bottom: 10vh;
+            }
+
+            html {
+                scroll-behavior: smooth; }
+
+            /* line 8, ../sass/main.sass */
+            body {
+                height: 100%;
+                margin: 0;
+                font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+                background: radial-gradient(circle, #e5e5e5 0%, #5B5056 100%);
+                position: relative;
+            }
+
+            /* line 15, ../sass/main.sass */
+            header {
+                height: 17vh;
+                background: radial-gradient(circle, #e5e5e5 0%, #5B5056 100%);
+                padding: 5px;
+                overflow: hidden;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                border-bottom: 3px solid black;
+            }
+
+            h1{
+                margin-left: 40px;
+                margin-right: 40px;
+                padding: 10px;
+            }
+
+            /* line 33, ../sass/main.sass */
+            footer {
+                clear: both;
+                text-align: center;
+                padding: 5px;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+            }
+
+            /* line 41, ../sass/main.sass */
+            a {
+                text-decoration: none;
+                color: #ffffff;
+            }
+
+            /* line 45, ../sass/main.sass */
+            .przycisk_menu {
+                color: #ffffff ;
+                text-decoration: none;
+                text-align: center;
+                font-size: 40px !important;
+                margin: 5px;
+                cursor: pointer;
+                flex-grow: 1;
+                background: linear-gradient(rgba(33, 48, 88, 0.4), rgba(33, 48, 88, 0.4));
+                padding-top: 6vh;
+                padding-bottom: 6vh;
+                padding-left: 4vw;
+                padding-right: 4vw;
+                border: 2px solid #ffffff !important;
+                border-radius: 6px;
+                display: inline-block;
+                margin-left: 4vh;
+                margin-top: 32vh;
+            }
+            /* line 61, ../sass/main.sass */
+            .przycisk_menu:hover {
+                border-color: black !important;
+            }
+            /* line 64, ../sass/main.sass */
+            .przycisk_menu:active {
+                position: relative;
+                top: 1px;
+            }
+
+            /* line 68, ../sass/main.sass */
+            #logo {
+                float: left;
+            }
+
+            .mainContent{
+                background-image: url(../images/ipad.jpg) !important;
+                background-repeat: no-repeat, repeat;
+                background-position: center;
+                background-size: cover;
+                color: white;
+                margin-top: 18vh;
+                border-bottom: 3px solid black;
+                height: 80vh;
+                width: 100%;
+            }
+
+            #buttonContainer{
+                text-align: center;
+            }
+
+            /* line 1, ../sass/tabela.sass */
+            .divTabela {
+                width: 30vw;
+                height: 50vh;
+                display: table;
+                margin: 0 auto;
+            }
+
+            /* line 8, ../sass/tabela.sass */
+            .divTabelaRow {
+                display: table-row;
+                width: 100%;
+                margin: auto;
+            }
+
+            /* line 13, ../sass/tabela.sass */
+            .divTabelaCell {
+                display: table-cell;
+                border-style: solid;
+                border-width: 1px;
+                width: 99px;
+                height: 99px;
+                font-size: 75px;
+                border-color: black;
+                color: red;
+                text-align: center;
+            }
+
+            /* line 24, ../sass/tabela.sass */
+            .przyciskContainer {
+                text-align: center;
+            }
+
+            #zadanieContent{
+                height: 80vh;
+            }
+
+            /* line 27, ../sass/tabela.sass */
+            .przycisk {
+                color: #ffffff ;
+                text-decoration: none;
+                text-align: center;
+                font-size: 20px !important;
+                margin: 5px;
+                cursor: pointer;
+                flex-grow: 1;
+                background: linear-gradient(rgba(33, 48, 88, 0.4), rgba(33, 48, 88, 0.4));
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 30px;
+                padding-right: 30px;
+                border: 2px solid #5B5056 !important;
+                border-radius: 6px;
+                display: inline-block;
+                margin-left: 10px;
+                margin-top: 5vh;
+            }
+            /* line 43, ../sass/tabela.sass */
+            .przycisk:hover {
+                border-color: #ffffff !important;
+            }
+            /* line 46, ../sass/tabela.sass */
+            .przycisk:active {
+                position: relative;
+                top: 1px;
+            }
+
+            p{
+                margin: 10px;
+            }
+
+
+            @media (max-width: 1400px) {
+                #ph1{
+                    height:10vh ;
+                    width: 100%;
+                }
+
+                #logo {
+                    max-height: 13vh;
+                    max-width: 13vw;
+                    float: left;
+                }
+
+                header {
+                    height: 17vh;
+                    background: radial-gradient(circle, #e5e5e5 0%, #5B5056 100%);
+                    padding: 5px;
+                    overflow: hidden;
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                    border-bottom: 3px solid black;
+                }
+
+                .przycisk_menu {
+                    display: list-item;
+                    list-style: none;
+                    margin-top: 3vh;
+                    font-size: 15px !important;
+                    height: 1px;
+                    margin-right: 10vw;
+                    margin-left: 10vw;
+                }
+
+                .divTabela {
+                    width: 300px;
+                    height: 300px;
+                }
+
+                #zadanieContent{
+                    height: 600px;
+                }
+
+            }</style>{% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {% block body %}
+            <div class="main">
+            <header>
+                <div id="logo">
+                    <a href="#">
+                        <img src="../images/logo.png" style="height: 14vh;" alt="Logo">
+                    </a>
+                </div>
+            </header>
+            <div class="mainContent">
+                <div id="ph1"></div>
+                <div id="buttonContainer">
+                    <a href="#content">
+                        <div class="przycisk_menu" onclick="wyswietlPD()">Prace domowe</div>
+                    </a>
+                    <a href="#content">
+                        <div class="przycisk_menu" onclick="wyswietlKontakt()">Kontakt</div>
+                    </a>
+                    <a href="#">
+                        <div class="przycisk_menu" onclick="wyswietlMain()">O mnie</div>
+                    </a>
+                    <a href="#">
+                        <div class="przycisk_menu" onclick="wyswietlMain()">Moje projekty</div>
+                    </a>
+                </div>
+            </div>
+            <div id="content">&nbsp;</div>
+            <section id="zadanieContent" style="display: none;">
+                <div>
+                    <h1 style="text-align:center; font-size: 40px; margin-top: 150px; margin-bottom: 50px;">Kółko i krzyżyk
+                    </h1>
+                    <div class="divTabela">
+                        <div class="divTabelaRow">
+                            <div class="divTabelaCell">
+                                <div id="w1k1" onclick="ustawZnak(this.id)">&nbsp;</div>
+                            </div>
+                            <div class="divTabelaCell">
+                                <div id="w1k2" onclick="ustawZnak(this.id)">&nbsp;</div>
+                            </div>
+                            <div class="divTabelaCell">
+                                <div id="w1k3" onclick="ustawZnak(this.id)">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="divTabelaRow">
+                            <div class="divTabelaCell">
+                                <div id="w2k1" onclick="ustawZnak(this.id)">&nbsp;</div>
+                            </div>
+                            <div class="divTabelaCell">
+                                <div id="w2k2" onclick="ustawZnak(this.id)">&nbsp;</div>
+                            </div>
+                            <div class="divTabelaCell">
+                                <div id="w2k3" onclick="ustawZnak(this.id)">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="divTabelaRow">
+                            <div class="divTabelaCell">
+                                <div id="w3k1" onclick="ustawZnak(this.id)">&nbsp;</div>
+                            </div>
+                            <div class="divTabelaCell">
+                                <div id="w3k2" onclick="ustawZnak(this.id)">&nbsp;</div>
+                            </div>
+                            <div class="divTabelaCell">
+                                <div id="w3k3" onclick="ustawZnak(this.id)">&nbsp;</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="przyciskContainer">
+                        <div class="przycisk" onclick="start()">Start</div>
+                        <div class="przycisk" onclick="reset()">Reset</div>
+                    </div>
+                </div>
+            </section>
+            <section id="kontakt" style="display: none;">
+                <h2 style="margin-top: 155px; margin-left: 10px;">Kontakt </h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ante ante, volutpat in diam et,
+                    convallis sodales nisi. Donec a suscipit lacus. Aliquam tellus ex, rhoncus ut dignissim vitae, aliquam
+                    in felis. Curabitur efficitur porta odio vitae tincidunt. Maecenas congue, lacus et hendrerit
+                    condimentum, mi dolor dapibus mi, accumsan interdum dolor metus nec mauris. Nullam facilisis enim et leo
+                    fringilla egestas. Curabitur convallis scelerisque nisl, sed dapibus ligula porta id. In sed nibh urna.
+                    Vivamus molestie aliquet purus, at tempor dui bibendum nec. Nulla dapibus nulla et leo auctor, eget
+                    facilisis nisl dapibus. Mauris dapibus sem sed mollis tempus. Donec ullamcorper leo sem, at aliquam dui
+                    dignissim non.
+
+                    Maecenas id orci diam. Donec vestibulum at metus in volutpat. Donec bibendum venenatis ultricies. Nunc
+                    pulvinar posuere tellus. Aenean elit arcu, dictum a sollicitudin at, lacinia sed risus. Cras convallis
+                    consectetur volutpat. Nam posuere posuere lacus sed tristique. Maecenas rutrum risus massa, ac porta
+                    turpis blandit at. Fusce ac lacus tempus, tincidunt leo quis, pretium turpis. Nunc elementum elit
+                    vestibulum, posuere est sit amet, semper enim. Etiam vel lectus orci. In hac habitasse platea dictumst.
+                    Maecenas eleifend elit in leo rutrum vulputate.
+
+                    Nam accumsan, urna quis tempus auctor, velit mi ultricies lectus, sit amet efficitur diam diam vel enim.
+                    Pellentesque condimentum neque vel eros sagittis, vitae condimentum augue placerat. Donec in pretium
+                    metus. Vivamus metus nunc, rhoncus et felis vitae, tincidunt congue mi. Proin sit amet dignissim felis,
+                    in hendrerit enim. Etiam finibus, felis in egestas varius, libero ligula rutrum turpis, vel mattis
+                    tortor arcu ut elit. Duis non sem posuere ante ornare laoreet a sit amet mauris. Ut justo nisl, sagittis
+                    tempus luctus et, pulvinar in diam.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ante ante, volutpat in diam et,
+                    convallis sodales nisi. Donec a suscipit lacus. Aliquam tellus ex, rhoncus ut dignissim vitae, aliquam
+                    in felis. Curabitur efficitur porta odio vitae tincidunt. Maecenas congue, lacus et hendrerit
+                    condimentum, mi dolor dapibus mi, accumsan interdum dolor metus nec mauris. Nullam facilisis enim et leo
+                    fringilla egestas. Curabitur convallis scelerisque nisl, sed dapibus ligula porta id. In sed nibh urna.
+                    Vivamus molestie aliquet purus, at tempor dui bibendum nec. Nulla dapibus nulla et leo auctor, eget
+                    facilisis nisl dapibus. Mauris dapibus sem sed mollis tempus. Donec ullamcorper leo sem, at aliquam dui
+                    dignissim non.
+
+                    Maecenas id orci diam. Donec vestibulum at metus in volutpat. Donec bibendum venenatis ultricies. Nunc
+                    pulvinar posuere tellus. Aenean elit arcu, dictum a sollicitudin at, lacinia sed risus. Cras convallis
+                    consectetur volutpat. Nam posuere posuere lacus sed tristique. Maecenas rutrum risus massa, ac porta
+                    turpis blandit at. Fusce ac lacus tempus, tincidunt leo quis, pretium turpis. Nunc elementum elit
+                    vestibulum, posuere est sit amet, semper enim. Etiam vel lectus orci. In hac habitasse platea dictumst.
+                    Maecenas eleifend elit in leo rutrum vulputate.
+
+                    Nam accumsan, urna quis tempus auctor, velit mi ultricies lectus, sit amet efficitur diam diam vel enim.
+                    Pellentesque condimentum neque vel eros sagittis, vitae condimentum augue placerat. Donec in pretium
+                    metus. Vivamus metus nunc, rhoncus et felis vitae, tincidunt congue mi. Proin sit amet dignissim felis,
+                    in hendrerit enim. Etiam finibus, felis in egestas varius, libero ligula rutrum turpis, vel mattis
+                    tortor arcu ut elit. Duis non sem posuere ante ornare laoreet a sit amet mauris. Ut justo nisl, sagittis
+                    tempus luctus et, pulvinar in diam.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ante ante, volutpat in diam et,
+                    convallis sodales nisi. Donec a suscipit lacus. Aliquam tellus ex, rhoncus ut dignissim vitae, aliquam
+                    in felis. Curabitur efficitur porta odio vitae tincidunt. Maecenas congue, lacus et hendrerit
+                    condimentum, mi dolor dapibus mi, accumsan interdum dolor metus nec mauris. Nullam facilisis enim et leo
+                    fringilla egestas. Curabitur convallis scelerisque nisl, sed dapibus ligula porta id. In sed nibh urna.
+                    Vivamus molestie aliquet purus, at tempor dui bibendum nec. Nulla dapibus nulla et leo auctor, eget
+                    facilisis nisl dapibus. Mauris dapibus sem sed mollis tempus. Donec ullamcorper leo sem, at aliquam dui
+                    dignissim non.
+
+                    Maecenas id orci diam. Donec vestibulum at metus in volutpat. Donec bibendum venenatis ultricies. Nunc
+                    pulvinar posuere tellus. Aenean elit arcu, dictum a sollicitudin at, lacinia sed risus. Cras convallis
+                    consectetur volutpat. Nam posuere posuere lacus sed tristique. Maecenas rutrum risus massa, ac porta
+                    turpis blandit at. Fusce ac lacus tempus, tincidunt leo quis, pretium turpis. Nunc elementum elit
+                    vestibulum, posuere est sit amet, semper enim. Etiam vel lectus orci. In hac habitasse platea dictumst.
+                    Maecenas eleifend elit in leo rutrum vulputate.
+
+                    Nam accumsan, urna quis tempus auctor, velit mi ultricies lectus, sit amet efficitur diam diam vel enim.
+                    Pellentesque condimentum neque vel eros sagittis, vitae condimentum augue placerat. Donec in pretium
+                    metus. Vivamus metus nunc, rhoncus et felis vitae, tincidunt congue mi. Proin sit amet dignissim felis,
+                    in hendrerit enim. Etiam finibus, felis in egestas varius, libero ligula rutrum turpis, vel mattis
+                    tortor arcu ut elit. Duis non sem posuere ante ornare laoreet a sit amet mauris. Ut justo nisl, sagittis
+                    tempus luctus et, pulvinar in diam.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ante ante, volutpat in diam et,
+                    convallis sodales nisi. Donec a suscipit lacus. Aliquam tellus ex, rhoncus ut dignissim vitae, aliquam
+                    in felis. Curabitur efficitur porta odio vitae tincidunt. Maecenas congue, lacus et hendrerit
+                    condimentum, mi dolor dapibus mi, accumsan interdum dolor metus nec mauris. Nullam facilisis enim et leo
+                    fringilla egestas. Curabitur convallis scelerisque nisl, sed dapibus ligula porta id. In sed nibh urna.
+                    Vivamus molestie aliquet purus, at tempor dui bibendum nec. Nulla dapibus nulla et leo auctor, eget
+                    facilisis nisl dapibus. Mauris dapibus sem sed mollis tempus. Donec ullamcorper leo sem, at aliquam dui
+                    dignissim non.
+
+                    Maecenas id orci diam. Donec vestibulum at metus in volutpat. Donec bibendum venenatis ultricies. Nunc
+                    pulvinar posuere tellus. Aenean elit arcu, dictum a sollicitudin at, lacinia sed risus. Cras convallis
+                    consectetur volutpat. Nam posuere posuere lacus sed tristique. Maecenas rutrum risus massa, ac porta
+                    turpis blandit at. Fusce ac lacus tempus, tincidunt leo quis, pretium turpis. Nunc elementum elit
+                    vestibulum, posuere est sit amet, semper enim. Etiam vel lectus orci. In hac habitasse platea dictumst.
+                    Maecenas eleifend elit in leo rutrum vulputate.
+
+                    Nam accumsan, urna quis tempus auctor, velit mi ultricies lectus, sit amet efficitur diam diam vel enim.
+                    Pellentesque condimentum neque vel eros sagittis, vitae condimentum augue placerat. Donec in pretium
+                    metus. Vivamus metus nunc, rhoncus et felis vitae, tincidunt congue mi. Proin sit amet dignissim felis,
+                    in hendrerit enim. Etiam finibus, felis in egestas varius, libero ligula rutrum turpis, vel mattis
+                    tortor arcu ut elit. Duis non sem posuere ante ornare laoreet a sit amet mauris. Ut justo nisl, sagittis
+                    tempus luctus et, pulvinar in diam.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ante ante, volutpat in diam et,
+                    convallis sodales nisi. Donec a suscipit lacus. Aliquam tellus ex, rhoncus ut dignissim vitae, aliquam
+                    in felis. Curabitur efficitur porta odio vitae tincidunt. Maecenas congue, lacus et hendrerit
+                    condimentum, mi dolor dapibus mi, accumsan interdum dolor metus nec mauris. Nullam facilisis enim et leo
+                    fringilla egestas. Curabitur convallis scelerisque nisl, sed dapibus ligula porta id. In sed nibh urna.
+                    Vivamus molestie aliquet purus, at tempor dui bibendum nec. Nulla dapibus nulla et leo auctor, eget
+                    facilisis nisl dapibus. Mauris dapibus sem sed mollis tempus. Donec ullamcorper leo sem, at aliquam dui
+                    dignissim non.
+
+                    Maecenas id orci diam. Donec vestibulum at metus in volutpat. Donec bibendum venenatis ultricies. Nunc
+                    pulvinar posuere tellus. Aenean elit arcu, dictum a sollicitudin at, lacinia sed risus. Cras convallis
+                    consectetur volutpat. Nam posuere posuere lacus sed tristique. Maecenas rutrum risus massa, ac porta
+                    turpis blandit at. Fusce ac lacus tempus, tincidunt leo quis, pretium turpis. Nunc elementum elit
+                    vestibulum, posuere est sit amet, semper enim. Etiam vel lectus orci. In hac habitasse platea dictumst.
+                    Maecenas eleifend elit in leo rutrum vulputate.
+
+                    Nam accumsan, urna quis tempus auctor, velit mi ultricies lectus, sit amet efficitur diam diam vel enim.
+                    Pellentesque condimentum neque vel eros sagittis, vitae condimentum augue placerat. Donec in pretium
+                    metus. Vivamus metus nunc, rhoncus et felis vitae, tincidunt congue mi. Proin sit amet dignissim felis,
+                    in hendrerit enim. Etiam finibus, felis in egestas varius, libero ligula rutrum turpis, vel mattis
+                    tortor arcu ut elit. Duis non sem posuere ante ornare laoreet a sit amet mauris. Ut justo nisl, sagittis
+                    tempus luctus et, pulvinar in diam.
+                </p>
+            </section>
+            <footer>
+                <p>Hubert Furmański</p>
+                <p>Copyright © 2020</p>
+            </footer>
+        </div>
+        {% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>
