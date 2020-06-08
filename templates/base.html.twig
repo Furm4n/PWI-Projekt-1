@@ -32,7 +32,8 @@
                         <a class="nav-link" href="https://github.com/Furm4n/PWI-Projekt-1">Repozytorium</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Język</a>
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                           aria-haspopup="true" aria-expanded="false">Język</a>
                         <div class="dropdown-menu" style="">
                             <a class="dropdown-item" href="#">Polski</a>
                             <div class="dropdown-divider"></div>
@@ -47,6 +48,11 @@
                     {% else %}
                         <li class="nav-item">
                             <a class="nav-link" href="{{ path('app_login') }}">Zaloguj się</a>
+                        </li>
+                    {% endif %}
+                    {% if app.user %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('user') }}">Dla zalogowanych</a>
                         </li>
                     {% endif %}
                 </ul>
