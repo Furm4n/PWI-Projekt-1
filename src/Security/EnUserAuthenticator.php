@@ -71,7 +71,7 @@ class UserAuthenticator extends AbstractFormLoginAuthenticator implements Passwo
 
         if (!$user) {
             // fail authentication with a custom error
-            throw new CustomUserMessageAuthenticationException('Nie odnaleziono użytkownika');
+            throw new CustomUserMessageAuthenticationException('No user found');
         }
 
         return $user;
@@ -96,7 +96,7 @@ class UserAuthenticator extends AbstractFormLoginAuthenticator implements Passwo
             return new RedirectResponse($targetPath);
         }
 
-        return new RedirectResponse($this->urlGenerator->generate('main'));
+        return new RedirectResponse($this->urlGenerator->generate('en_main'));
     }
 
     protected function getLoginUrl()
