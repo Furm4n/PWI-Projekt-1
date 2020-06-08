@@ -1,0 +1,25 @@
+{% extends 'en_base.html.twig' %}
+
+{% block body %}
+<div class="jumbotron">
+    {% for flashError in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+    {% endfor %}
+
+    <h1>Zarejestruj się</h1>
+
+    {{ form_start(registrationForm) }}
+    {{ form_row(registrationForm.username, {
+        label: 'Username'
+    }) }}
+    {{ form_row(registrationForm.plainPassword, {
+        label: 'Password'
+    }) }}
+    {{ form_row(registrationForm.agreeTerms, {
+        label: 'Accept terms'
+    }) }}
+
+    <button type="submit" class="btn btn-primary">Sign in</button>
+    {{ form_end(registrationForm) }}
+</div>
+{% endblock %}
