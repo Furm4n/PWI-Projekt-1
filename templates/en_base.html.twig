@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('../images/logo.png') }}"/>
     <link rel="stylesheet" href="{{ asset('../css/bootstrap.min.css') }}">
-    <title>{% block title %}Hubert Furmański - Programowanie w Internecie{% endblock %}</title>
+    <title>{% block title %}Hubert Furmański - Website development{% endblock %}</title>
 </head>
 <body>
 <div class="container-lg">
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <a class="navbar-brand" href="{{ path('main') }}">Strona główna</a>
+            <a class="navbar-brand" href="{{ path('main') }}">Homepage</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
                     aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -19,40 +19,40 @@
             <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ path('projekt') }}">Projekt <span
+                        <a class="nav-link" href="{{ path('en_projekt') }}">Projekt <span
                                     class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ path('o_mnie') }}">O mnie</a>
+                        <a class="nav-link" href="{{ path('en_o_mnie') }}">About me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ path('kontakt') }}">Kontakt</a>
+                        <a class="nav-link" href="{{ path('en_kontakt') }}">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/Furm4n/PWI-Projekt-1">Repozytorium</a>
+                        <a class="nav-link" href="https://github.com/Furm4n/PWI-Projekt-1">Repository</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
-                           aria-haspopup="true" aria-expanded="false">Język</a>
+                           aria-haspopup="true" aria-expanded="false">Language</a>
                         <div class="dropdown-menu" style="">
-                            <a class="dropdown-item" href="{{ path('main') }}">Polski</a>
+                            <a class="dropdown-item" href="{{ path('main') }}">Polish</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ path('en_main') }}">Angielski</a>
+                            <a class="dropdown-item" href="{{ path('en_main') }}">English</a>
                         </div>
                     </li>
                     {% if app.user %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ path('app_logout') }}">Wyloguj się</a>
+                            <a class="nav-link" href="{{ path('app_logout') }}">Log out</a>
                         </li>
                         </a>
                     {% else %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ path('app_login') }}">Zaloguj się</a>
+                            <a class="nav-link" href="{{ path('app_login') }}">Log in</a>
                         </li>
                     {% endif %}
                     {% if app.user %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ path('user') }}">Dla zalogowanych</a>
+                            <a class="nav-link" href="{{ path('user') }}">For logged in</a>
                         </li>
                     {% endif %}
                 </ul>
@@ -60,18 +60,18 @@
         </nav>
     </header>
     <div class="jumbotron">
-        <h2>Witaj na mojej stronie!</h2>
-        <p>Projekt został przygotowany w ramach przedmiotu Programowanie w Internecie w oparciu o framework Symfony
+        <h2>Welcome on my website!</h2>
+        <p>The project was prepared as part of Website development subject and was based on the Symfony framework
             PHP</p>
         <hr class="my-4">
-        <h2>Opis projektu:</h2>
-        <p>Po zalogowaniu użytkownik otrzyma dostęp do treści dostępnych tylko dla zalogowanych</p>
+        <h2>Project description:</h2>
+        <p>After log in you can see hidden content!</p>
         <hr class="my-4">
-        <h2>Istniejące konta:</h2>
+        <h2>Existing accounts:</h2>
         <p><strong>Login: </strong>admin <br>
-            <strong>Hasło: </strong>admin</p>
+            <strong>Password: </strong>admin</p>
         <p><strong>Login: </strong>user<br>
-            <strong>Hasło: </strong>12345</p>
+            <strong>Password: </strong>12345</p>
     </div>
     {% block body %}{% endblock %}
     <table class="table table-hover">

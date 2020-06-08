@@ -39,6 +39,38 @@ class ContentController extends AbstractController
         return $this->render('main/omnie.html.twig');
     }
 
+    /**
+     * @Route("/en", name="en_main")
+     */
+    public function en_index()
+    {
+        return $this->render('main/en_index.html.twig');
+    }
+
+    /**
+     * @Route("/en/projekt", name="en_projekt")
+     */
+    public function en_projekt()
+    {
+        return $this->render('main/en_projekt.html.twig');
+    }
+
+    /**
+     * @Route("/en/kontakt", name="en_kontakt")
+     */
+    public function en_kontakt()
+    {
+        return $this->render('main/en_kontakt.html.twig');
+    }
+
+    /**
+     * @Route("/en/o_mnie", name="en_o_mnie")
+     */
+    public function en_oMnie()
+    {
+        return $this->render('main/en_omnie.html.twig');
+    }
+
 
 
 }
